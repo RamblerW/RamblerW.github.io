@@ -11,6 +11,8 @@
   - [程序员  |  easyUI 学习笔记](xue-xi/easyui.md)
   - [程序员  |  Linux 学习笔记](xue-xi/linux.md)
   - [程序员  |  SQLite 学习笔记](xue-xi/sqlitexue-xi-bi-ji.md)
+- 随笔
+  - [谈谈“版权意识”](suibi/copyright.md)
 - 淌过的坑
   - [gitbook 的坑](tang-guo-de-keng/gitbook.md)
   - [ionic3 的坑](tang-guo-de-keng/ionic3.md)
