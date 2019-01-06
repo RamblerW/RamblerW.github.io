@@ -44,18 +44,31 @@
      执行 npm rebuild node-sass --force 后，再次运行 ng serve 启动项目，仍报上图中的错误。
    * 问题原因：rebuild node-sass 的时候，需要从github上下载文件，会涉及墙的问题
    * 解决方案：请翻墙或者连手机的热点再次执行 npm rebuild node-sass --force
+
 8. Supplied parameters do not match any signature of call target.
+
    * 解决方案：执行 git merge origin/feiyi\_dev 与 npm install portalface --save
+
 9. angular创建项目报错：cb\(\) never called!
+
    * 解决方案：执行npm cache verify命令后，重新创建
+
 10. 打包报错：JavaScript heap out of menory
     * 问题原因：node内存不够
+
     * 解决方案：`package.json`中，设置`build:prod`的值为
       ```
       node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng build --prod
       ```
 
       使用`npm run build:prod`命令进行编译
+
+11. 更新node后`ng serve`启动报错
+
+    - 解决方案：
+      1. 删除 node_modules，重新执行 `npm install`
+      2. `npm install node-sass`
+      3. `npm rebuild node-sass`
 
 ### 资料
 

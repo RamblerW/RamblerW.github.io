@@ -86,7 +86,8 @@ sz filename
 rz
 ```
 - 配置 python3 环境
-    1. yum 安装 python3
+    - 安装 python3
+
     ```
     # 添加epel源
     sudo yum install epel-release
@@ -98,4 +99,42 @@ rz
     yum install python34-setuptools
     easy_install-3.4 pip
     ```
-    
+
+
+- 安装node
+
+  ```
+  sudo yum install epel-release
+  sudo yum install nodejs
+  sudo yum install npm
+  ```
+
+- 报错`vim: command not found`
+
+  - 参考：http://blog.51cto.com/linushai/1154871
+  - 输入命令`rpm -qa|grep vim`，如果 vim 已经正确安装，则会返回`vim-minimal`、`vim-common`、`vim-enhanced`三个的信息，缺少哪个安哪个，如`yum -y install vim-enhanced `
+
+- ip能ping通，访问80端口提示`This site can’t be reached.……refused to connect.`
+
+  - 问题原因：centos7.3自带firewall防火墙，防火墙把80端口禁掉了
+  - 解决方案：https://www.wordpressleaf.com/2016_1402.html
+    - 查看防火墙版本：`firewall-cmd --version`
+    - 查看防火墙运行状态：`firewall-cmd --state`
+    - 在防火墙中添加80端口权限：`firewall-cmd --zone=public --add-port=80/tcp --permanent`
+    - 重启防火墙：`systemctl restart firewalld`
+
+- nginx搭建
+
+  - 安装：`yum -y install nginx`
+  - 启动：`service nginx start`
+  - 停止：`service nginx stop`
+  - 重启：`service nginx restart`
+  - 卸载：`yum remove nginx`
+  - 查看配置文件nginx.conf路径
+    - `ps aux/grep nginx`：查看nginx的路径 param_url
+    - `param_url -t`：查看配置文件路径，successful的即是
+
+- nginx配置
+
+  - 若是使用root新建的目录，则目录在`/root`下，在nginx中配置根目录中记得添加`/root`这一级
+  - nginx直接访问`/root`目录下的文件会报错 403，可以将文件移动到`/data`下

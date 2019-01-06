@@ -17,20 +17,36 @@
    defaults write com.apple.dock springboard-columns Default
    killall Dock
    ```
+
 2. 添加环境变量
    ```
    open -e .bash_profile
    export PATH=${PATH}:/Library/Android/sdk/platform-tools
    source .bash_profile
    ```
+
 3. 查看软件安装位置
    ```
    which software_name
    ```
+
 4. 显示当前所在目录
    ```
    pwd
    ```
+
+5. 允许从任何来源安装应用程序
+   ```
+   sudo spctl --master-disable
+   ```
+
+6. 给指定目录sudo权限
+
+   ```
+   sudo chown -R sudo权限用户名 目录
+   ```
+
+7. 
 
 > ### 系统快捷键
 
@@ -41,15 +57,16 @@
 5. 切输入法：ctrl + option + space
 6. 打开finder：option + cmd + space
 7. 打开终端：cmd + shift + T（自定义）
-8. 锁屏：cmd + shift + L（自定义）
-9. 强制退出：cmd + option + shift + Esc
-10. Finder中跳转至指定路径：cmd + shift + G
-11. 锁屏：ctrl + shift + power
-12. Home/End：cmd + ↑/↓/←/→
-13. 打开新页签：cmd + T
-14. 关闭当前标签页：cmd + W
-15. 屏幕取词：cmd + ctrl + D
-16. 搜索后打开文件所在目录：cmd + enter
+8. 终端清屏：cmd + K
+9. 锁屏：cmd + shift + L（自定义）
+10. 强制退出：cmd + option + shift + Esc
+11. Finder中跳转至指定路径：cmd + shift + G
+12. 锁屏：ctrl + shift + power
+13. Home/End：cmd + ↑/↓/←/→
+14. 打开新页签：cmd + T
+15. 关闭当前标签页：cmd + W
+16. 屏幕取词：cmd + ctrl + D
+17. 搜索后打开文件所在目录：cmd + enter
 
 > ### Mac软件
 
