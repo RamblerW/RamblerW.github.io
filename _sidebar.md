@@ -11,11 +11,16 @@
   - [ MySQL 学习笔记](xue-xi/sql.md)
   - [ SQLite 学习笔记](xue-xi/sqlitexue-xi-bi-ji.md)
   - [正则 & Xpath 表达式](xue-xi/zheng-ze-biao-da-shi.md)
+- 项目
+  - [20160602 |纳新报名系统开发总结 ](project/signUpDevelop.md)
 - 随笔
-  - [谈谈“版权意识”](suibi/copyright.md)
-- Mac
-  - [系统快捷键 & 操作 & 软件安装](mac/kuai-jie-jian.md)
-  - [常用软件使用笔记](mac/software.md)
+  - [20160928 | 我的求职之路](suibi/theRoadToCover.md)
+  - [20181209 | 谈谈“版权意识”](suibi/copyright.md)
+  - [收藏 | 一个IT青年北漂四年的感悟](suibi/it-man-beijing-4-years.md)
+- 工具
+  - [Mac | 系统快捷键 & 操作 & 软件安装](tool/kuai-jie-jian.md)
+  - [Mac | 常用软件使用笔记](tool/software.md)
+  - [用平板扩展电脑屏幕](tool/expandScreen.md)
 - 收藏
   - [Java  |  解决Intellij idea Java JDK多重选择提示问题](shou-cang/ideaduo-ge-jdk.md)
   - [Java  |  spring注解定时器动态改变cron](shou-cang/springschedule.md)

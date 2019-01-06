@@ -1,8 +1,4 @@
-# gitbook学习笔记
-
 > 附：[gitbook官方手文档（中文版）](https://chrisniael.gitbooks.io/gitbook-documentation/content/)
-
-#### 1. 常用命令
 
 - 安装gitbook：npm install gitbook-cli -g
 - 创建文件夹：mkdir mybook
@@ -15,6 +11,7 @@
 
 ---
 
-Q：gitbook editor 创建的项目没有 **_book.json_** 配置文件，需要手动创建
+> ##### Q：gitbook editor 创建的项目没有 **_book.json_** 配置文件，需要手动创建
 
 A：解决方案：在gitbook项目根目录创建book.json文件
+

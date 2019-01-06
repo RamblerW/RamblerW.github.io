@@ -1,6 +1,4 @@
-# portalface
-
-### 常用命令
+> ### 常用命令
 
 * 创建项目：ng new project-name --style=scss （使用scss开发）
 * 创建模块（一级菜单）：ng g module 模块名
@@ -8,7 +6,7 @@
 * 新增服务：ng g service 服务名
 * 创建管道：ng g pipe 管道名
 
-### 常用操作
+> ### 常用操作
 
 1. 统计字符串长度（汉字也按照一个字符计算）：`[...str].length`
 2. 循环标签中id拼接：
@@ -40,7 +38,7 @@
    `npm install portalface --save`
 
 7. ng serve启动项目报如下错误：
-   ![](/Resources/images/kyee/portalface_1.jpeg)
+   ![](../Resources/images/kyee/portalface_1.jpeg)
      执行 npm rebuild node-sass --force 后，再次运行 ng serve 启动项目，仍报上图中的错误。
    * 问题原因：rebuild node-sass 的时候，需要从github上下载文件，会涉及墙的问题
    * 解决方案：请翻墙或者连手机的热点再次执行 npm rebuild node-sass --force

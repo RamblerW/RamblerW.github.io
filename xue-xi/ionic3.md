@@ -1,4 +1,3 @@
-# ionic3学习笔记
 - 查看版本： `ionic -version`
 
 - 创建应用：`ionic start 项目名 模板`（ionic start ionic3Demo tabs）blank-空项目，tabs-底部栏，sidemenu-侧滑栏

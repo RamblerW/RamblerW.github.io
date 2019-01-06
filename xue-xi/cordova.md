@@ -1,9 +1,9 @@
-# Cordova 学习笔记
-1. 使用插件
-    - 安装SQLite插件：ionic cordova plugin add cordova-sqlite-storage
-    - 将native插件写入package.json文件：npm install --save @ionic-native/sqlite
-    - 在src/app/app.module.ts中添加：import {SQLite} from "@ionic-native/sqlite";
-    - 在provides中添加 SQLite
+- 使用插件
+  - 安装SQLite插件：ionic cordova plugin add cordova-sqlite-storage
+  - 将native插件写入package.json文件：npm install --save @ionic-native/sqlite
+  - 在src/app/app.module.ts中添加：import {SQLite} from "@ionic-native/sqlite";
+  - 在provides中添加 SQLite
+
 - ts中使用插件：platforms/android/assets/www/cordova_plugins.js 查看对应插件的clobbers
 - 删除插件：cordova plugin remove cordova-plugin-battery-status
 - 查看当前项目的插件：ionic cordova plugin
@@ -20,7 +20,9 @@
     - 增加Android平台
     
     plugman platform add --platform_name android
+
 ##### 制作完成后
+
     - 添加package.json文件
     
     npm init
@@ -28,4 +30,3 @@
     - 安装插件
     
     cordova plugin add 插件路径
-    
