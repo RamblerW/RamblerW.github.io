@@ -1,6 +1,7 @@
 # MySQL学习笔记
 
-- ### 数据操纵语言 DML
+- #### 数据操纵语言 DML
+
     1. 不存在记录则插入数据
     ```sql
     insert into deviceentry (customerId,allNumber) select 'c','d'   
@@ -11,10 +12,11 @@
     select * from 表名 where concat(字段1, '分隔符', 字段2, '分隔符', ...字段n) like '%关键字1%' and concat(字段1, '分隔符', 字段2, '分隔符', ...字段n) like '%关键字2%' ......;
     ```
 
-- ### 数据定义语言 DDL
+- #### 数据定义语言 DDL
 
 
-- ### 数据控制语言 DCL
+- #### 数据控制语言 DCL
+
     1. 查看最大连接数
     ```sql
     show variables like "max_connections";
@@ -34,10 +36,27 @@
     ```
 
 
-- ### 事物控制语言 TCL
+- #### 事物控制语言 TCL
+
+- #### 常用函数
+
+
+  - `CONCAT_WS(separator,str1,str2,…)`：用指定分隔符连接字符串
 
 ---
 
-## 常用函数
+> ##### Q：数据库默认编码为_latin1_
 
-- `CONCAT_WS(separator,str1,str2,…)`：用指定分隔符连接字符串
+A：
+
+- 复制配置文件 _my.cnf_ 至 _etc_ 文件夹下，并添加如下配置
+
+  ```
+  [client]
+  default-character-set = utf8
+  [mysqld]
+  character-set-server = utf8
+  ```
+
+- 重启MySQL服务，执行命令```SHOW VARIABLES LIKE 'character%'```查看编码
+
