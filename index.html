@@ -14,24 +14,23 @@
   <div id="app">Loading ...</div>
   <script>
     window.$docsify = {
-        name: '',
-        // repo: 'https://github.com/ramblerw',
-        coverpage: true,
-        autoHeader: false,
-        loadSidebar: true,
-        // loadNavbar: true,
-        subMaxLevel: 4,
-        auto2top: true,
-        basePath: 'https://ramblerw.github.io/',
-        homepage: 'README.md',
-        basePath: '',
-        search: {
-            paths: 'https://ramblerw.github.io/',
-            placeholder: '查找……',
-            noData: '查无结果！',
-            // 搜索标题的最大程级, 1 - 6
-            depth: 6
-        }
+      name: '',
+      repo: 'https://github.com/ramblerw',
+      maxLevel: 2,
+      loadSidebar: true,
+      subMaxLevel: 4,
+      auto2top: true,
+      // 直接渲染其他域名的文档
+      basePath: 'https://ramblerw.github.io/',
+      search: 'auto', // 默认值
+      // 完整配置参数
+      search: {
+        paths: 'https://ramblerw.github.io/', // or 'auto'
+        placeholder: '查找……',
+        noData: '查无结果！',
+        // 搜索标题的最大程级, 1 - 6
+        depth: 6
+      }
     }
   </script>
   <script src="//unpkg.com/docsify"></script>
