@@ -73,7 +73,7 @@
   - `db.表名.insert({'key1':'value1','key2':'value2'})`
   - `db.表名.save({'key1':'value1','key2':'value2'})`：指定 _id 为更新，不指定为插入
 
-- 更新操作：`db.表名.uopdate(criteria, objNew, upsert=false, multi=false)`
+- 更新操作：`db.表名.update(criteria, objNew, upsert=false, multi=false)`
   - **criteria**：update查询条件，类似于sql update中的where
   - **objNew**：update对象和更新操作符等，类似于sql update中的set
   - **upsert**：若不存在update的记录，则插入 objNew

@@ -9,11 +9,14 @@
 > ### 常用操作
 
 1. 统计字符串长度（汉字也按照一个字符计算）：`[...str].length`
+
 2. 循环标签中id拼接：
    `id="sLevelName_{{item.ID}}"`
+
 3. 禁止触发行点击事件
    ts中弹框事件return之前加上：
    `event.stopPropagation();`
+
 4. 根据条件添加样式
    * HTML:
      ```html
@@ -28,11 +31,13 @@
        color: black;
      }
      ```
+
 5. 覆盖框架样式
-     自定义样式前加 
+   自定义样式前加 
    ```css
    :host /deep/
    ```
+
 6. 更新框架为最新
 
    `npm install portalface --save`
@@ -52,21 +57,33 @@
    * 解决方案：执行npm cache verify命令后，重新创建
 
 10. 打包报错：JavaScript heap out of menory
-    * 问题原因：node内存不够
+     * 问题原因：node内存不够
 
-    * 解决方案：`package.json`中，设置`build:prod`的值为
-      ```
-      node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng build --prod
-      ```
+     * 解决方案：`package.json`中，设置`build:prod`的值为
+       ```
+       node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng build --prod
+       ```
 
-      使用`npm run build:prod`命令进行编译
+       使用`npm run build:prod`命令进行编译
 
 11. 更新node后`ng serve`启动报错
 
-    - 解决方案：
-      1. 删除 node_modules，重新执行 `npm install`
-      2. `npm install node-sass`
-      3. `npm rebuild node-sass`
+      - 解决方案：
+        1. 删除 node_modules，重新执行 `npm install`
+        2. `npm install node-sass`
+        3. `npm rebuild node-sass`
+
+12. 跨域请求
+
+      - 增加参数
+
+        ```javascript
+        xhrFields:{
+        		  withCredentials: true
+        }
+        ```
+
+13. 
 
 ### 资料
 

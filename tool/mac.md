@@ -44,7 +44,19 @@
    sudo chown -R sudo权限用户名 目录
    ```
 
-7. 
+7. 隐藏桌面所有内容
+
+   ```
+   defaults write com.apple.finder CreateDesktop -bool FALSE; killall Finder
+   ```
+
+8. 显示桌面所有内容
+
+   ```
+   defaults write com.apple.finder CreateDesktop -bool true; killall Finder
+   ```
+
+9. 1
 
 > ### 系统快捷键
 
@@ -68,13 +80,20 @@
 
 > ### Mac软件
 
-[http://www.chinamac.cc/](http://www.chinamac.cc/)    apple / 20181818  
-[https://www.jianshu.com/p/235efc09d647](https://www.jianshu.com/p/235efc09d647)  
-**iWork**：App Store  
-卸载软件**AppCleaner**：[http://freemacsoft.net/appcleaner/](http://freemacsoft.net/appcleaner/)  
-解压缩软件**The Unarchiver**：[https://theunarchiver.com/](https://theunarchiver.com/)  
-思维导图软件**MindNode**：[https://mindnode.com/](https://mindnode.com/)  
-IINA   
+[[http://www.chinamac.cc/](http://www.chinamac.cc/)    apple / 20181818
+
+[https://www.jianshu.com/p/235efc09d647](https://www.jianshu.com/p/235efc09d647)
+
+**iWork**：App Store
+
+卸载软件**AppCleaner**：[http://freemacsoft.net/appcleaner/](http://freemacsoft.net/appcleaner/)
+
+解压缩软件**The Unarchiver**：[https://theunarchiver.com/](https://theunarchiver.com/)
+
+思维导图软件**MindNode**：[https://mindnode.com/](https://mindnode.com/)
+
+IINA
+
 CheatSheet 查看快捷方式
 
 Hombrew    开源软件
@@ -90,6 +109,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
       ```
       SET PASSWORD FOR 'root'@'localhost' = PASSWORD('newpass');
       ```
+
 2. **安装下载器you-get和视频合并工具ffmpeg**
    ```
    brew install you-get
@@ -101,13 +121,22 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
    you-get -i https://www.bilibili.com/video/av5434702/
    you-get --format=hdmp4 'https://www.bilibili.com/video/av5434702/'
    ```
+
 3. **安装Tomcat**  
    1. 解压Tomcat到目录  
    2. sudo chmod 755 /Library/Tomcat/bin/\*.sh  
    3. sudo sh startup.sh
 
-4. **安装python服务器 Apache**  
+4. **安装python服务器 Apache**
+
    [python \| 从0开始python后端开发\_配置apache服务器（Mac系统）](shou-cang/apache.md)
+
+5. **Python**
+
+   - 使用 tesseract：`brew install tesseract`
+
+6. 1
+
 
 
 
