@@ -64,7 +64,7 @@ body {
 #words_old {
     font-family: "sans-serif";
     width: 500px;
-    font-size: 15px;
+    font-size: 18px;
     color: #666
 }
 
@@ -74,12 +74,12 @@ body {
 
 #elapseClock_old .digit_old {
     font-family: "digit";
-    font-size: 18px
+    font-size: 21px
 }
 
 #loveu_old {
     padding: 5px;
-    font-size: 12px;
+    font-size: 15px;
     /*margin-top: 10px;*/
     margin-right: 255px;
     text-align: right;
@@ -89,7 +89,7 @@ body {
 
 #loveu_old .signature_old {
     /*margin-top: 8px;*/
-    font-size: 12px;
+    /*font-size: 15px;*/
 }
 
 #clickSound {
