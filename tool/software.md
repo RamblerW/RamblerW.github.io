@@ -55,8 +55,14 @@
 
 - 停止：移动到bin目录下，执行`sudo sh shutdown.sh`
 
-- 运行Tomcat报错：error=13, permission denied
+- 运行Tomcat报错：<font color=red>error=13, permission denied</font>
+
   - 解决方案：打开Terminal，找到catalina.sh所在的文件夹下，输入`chmod a+x catalina.sh`即可
+
+- 运行Tomcat报错：<font color=red>ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext</font>
+
+  - 解决方案：在Tomcat配置文件/conf/catalina.properties中在`tomcat.util.scan.StandardJarScanFilter.jarsToSkip=`后添加`*.jar`
+  - 参考：https://blog.csdn.net/hf_programmer/article/details/79085682
 
 - 配置SSL
 

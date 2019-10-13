@@ -32,3 +32,5 @@ $.ajax({
     }
 });
 ```
+
+- js包转ts：`npm install --save @types/xxxxx`，`xxxxx`为js包的名称

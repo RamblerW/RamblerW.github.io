@@ -1,17 +1,40 @@
 > CentOS 7
 
+- 常用命令
+
+    - 查看端口占用：`netstat -tunlp|grep 端口号`
+
 - 配置阿里yum源
+
     - 查看系统版本：`cat /etc/redhat-release`
 
-    - 下载aliyun yum源repo文件：`wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo`
+    - 下载aliyun yum源repo文件：`wget -O /etc/yum.repos.d/CentOS-Base.repo  http://mirrors.aliyun.com/repo/Centos-7.repo`
     - 清除缓存：`yum clean all`
-    - 把yum源缓存到本地，加快软件的搜索好安装速度：`yum makecache`
+    - 把yum源缓存到本地，加快软件的搜索和安装速度：`yum makecache`
     - 列出 yum 安装包：`yum list`
-- navicat ssh 远程连接 mysql
-    - 新建 mysql 连接，在选项卡里点击“SSH”
 
-    - SSH的默认端口是22，这里的用户名和密码应该是在CentOS上拥有FTP权限的用户名和密码
-    - 填写“常规”选项卡，主机名/IP地址一定要填写<font color=red>“localhost”或者“127.0.0.1”</font>，用户名和密码是远程MySQL数据库的用户名和密码
+- yum 安装 MySQL https://www.cnblogs.com/wishwzp/p/7113403.html
+
+    - 安装 wget：`yum -y install wget`
+    - 下载安装包：`wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm`
+    - 安装yum源：`yum -y localinstall mysql57-community-release-el7-11.noarch.rpm `
+    - 在线安装：`yum -y install mysql-community-server`
+    - 启动服务：`systemctl start mysqld`
+    - 设置开机启动：`systemctl enable mysqld`、`systemctl daemon-reload`
+    - 获取临时密码：`vi /var/log/mysqld.log`，"A temporary password"后有临时密码
+    - 命令行登录：`mysql -u root -p`
+    - 修改密码：`ALTER USER 'root'@'localhost' IDENTIFIED BY 'newPassWord';`
+    - 设置允许远程登录：`GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'newPassWord' WITH GRANT OPTION;`
+    - 退出：`exit;`
+    - 防火墙开启3306端口远程访问
+        - `firewall-cmd --zone=public --add-port=3306/tcp --permanent`
+        - `firewall-cmd --reload`
+    - 设置编码
+        - `vim /etc/my.cnf`
+        - 在[mysqld]下增加：`character_set_server=utf8`
+        - 在[client]下增加：`default-character-set=utf8`
+    - 重启mysql服务：`systemctl restart mysqld`
+
 - yum 安装 jdk，配置环境变量
     1. 查看系统自带的 jdk 是否已安装：`yum list installed |grep java`
     - 查看yum库中的Java安装包：`yum -y list java*`
@@ -39,9 +62,13 @@
     #
     echo $JAVA_HOME
     ```
+
 - 查看 java 进程：`ps -ef | grep java`
+
 - 强制杀死进程：`kill -s 9 进程号`
+
 - 安装终端浏览器 w3m：`yum -y install w3m w3m-img`
+
 - 上传下载文件
 ```
 yum -y install lrzsz

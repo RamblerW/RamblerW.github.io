@@ -88,7 +88,7 @@ allprojects {
 
 R：在Android 和 iOS中, Ionic会试图阻止键盘的模糊输入以及聚焦元素，当在视图中滚动出现的时候。为了这项工作，任何可以获取焦点的元素必须在一个滚动视图或一个类似于带有滚动视图的Content指令内
 
-A：添加平台依赖后，修改```platforms/android/AndroidManifest.xml```中的```windowSoftInputMode```的值为```adjustPan|stateHidden```（参考资料：https://blog.csdn.net/qq_32107121/article/details/78627196）
+A：添加平台依赖后，修改```platforms/android/AndroidManifest.xml```中的```windowSoftInputMode```的值为`adjustPan|stateHidden`（参考资料：https://blog.csdn.net/qq_32107121/article/details/78627196）
 
 > ##### Q：ionic3打包报错：```Error: spawn EACCES```
 
@@ -170,3 +170,33 @@ document.body.addEventListener('touchmove' , function(e){
 e.preventDefault();
 })
 ```
+
+> ##### Q：ionic3使用本地图标
+
+A：https://www.jianshu.com/p/0fdf88275350
+
+```javascript
+<script>
+    setTimeout(function() {
+        var links = document.getElementsByTagName('link');
+        var linksLength = links.length;
+        for (var i = 0; i < linksLength; i++) {
+            if ('icon' === links[i].rel) {
+                links[i].type = 'image/x-icon';
+                links[i].href = 'assets/icon/favicon.ico';
+            }
+        }
+        links = null;
+    }, 0);
+</script>
+```
+
+> ##### Q：全局隐藏scroll滚动条样式
+
+A：https://blog.csdn.net/Neokekeke/article/details/78799430
+
+```css
+// 在app.scss中加入以下代码
+::-webkit-scrollbar { display: none !important;}
+```
+
