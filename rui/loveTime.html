@@ -14,9 +14,19 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/garden.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
+    <script>
+    	function playMusic(){
+    		setInterval(function () {
+				document.getElementById("music").play();
+			}, 1000);
+    	}
+    </script>
 </head>
 
 <body>
+	<audio id="music"  oncanplay="playMusic()" controls="controls" loop="loop" style="display: none">
+		<source src="audio/BGM.mp3" type="audio/mpeg">
+	</audio>
 	<div id="mainDiv">
 		<div id="content">
 			<div id="loveHeart">
